@@ -1,0 +1,29 @@
+{
+  "name": "tasklist-api",
+  "version": "1.0.0",
+  "description": "API REST para consumir no frontend de aplicações de task list.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raissaqueiroz/tasklist-api.git"
+  },
+  "author": "Raissa Queiroz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raissaqueiroz/tasklist-api/issues"
+  },
+  "homepage": "https://github.com/raissaqueiroz/tasklist-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
