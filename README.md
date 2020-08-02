@@ -52,8 +52,8 @@ Método para logar usuário. Ele retorna o id, nome, email e token de acesso.
 **Body*
 ```
 {
-  "email": "example@example.com",
-  "password_hash": "example123"
+  	"email": "example@example.com",
+  	"password_hash": "example123"
 }
 
 ```
@@ -67,9 +67,9 @@ Método para cadastrar novo usuário.
 ```
 {
 
-		name: Raissa Queiroz,
-		email: example@example.com,
-		password_hash: example123,
+	"name": "Example Name",
+	"email": "example@example.com",
+	"password_hash": "example123",
 
 }
 
@@ -88,11 +88,11 @@ Método para atualizar dados do usuário. É necessário além do corpo da requi
 ```
 {
 
-		name: Example Name,
-		email: example@example.com,
-		old_password: example123
-		password_hash: novoexample123,
-		confirm_password: novoexample123
+	"name": "Example Name Edit",
+	"email": "example@example.com",
+	"old_password": "example123"
+	"password_hash": "editexample123",
+	"confirm_password": "editexample123"
 
 }
 
@@ -101,23 +101,20 @@ Método para atualizar dados do usuário. É necessário além do corpo da requi
 *Headers*
 
 ```
-{
-	Authorization: token
-}
+{ "Authorization": "token" }
 
 ```
 
 ### Tasks: POST /tasks
 
-Método para cadastrar nova tarefa.
+Método para cadastrar nova tarefa. Somente a propriedade `task` é obrigatória no corpo da requisição. Caso não seja informado  a propriedade `ckeck`, como padrão ela é salva como false.
 
 **Body*
 
 ```
 {
-
-		task: criando task de example,
-
+	"task": "Criando Task Example",
+	"check": true
 }
 
 ```
@@ -125,9 +122,7 @@ Método para cadastrar nova tarefa.
 *Headers*
 
 ```
-{
-	Authorization: token
-}
+{ "Authorization": "token" }
 
 ```
 
@@ -140,16 +135,14 @@ Método para listar as tarefas, podendo elas serem filtradas através do Query P
 *Headers*
 
 ```
-{
-	Authorization: token
-}
+{ "Authorization": "token" }
 
 ```
 
-**exemplo**
+**example**
 
 ```
-GET /tasks?status=true
+GET /tasks?check=true
 
 ```
 
@@ -162,8 +155,8 @@ Método em que o usuário poderá atualizar a tarefa desejada, desde que a mesma
 ```
 {
 
-		task: Editando title da task
-		check: false,
+	"task": "Edit Title Task"
+	"check": false,
 
 }
 
@@ -172,9 +165,7 @@ Método em que o usuário poderá atualizar a tarefa desejada, desde que a mesma
 *Headers*
 
 ```
-{
-	Authorization: token
-}
+{ "Authorization": "token" }
 
 ```
 
@@ -186,9 +177,7 @@ Método em que o usuário poderá deletar a tarefa desejada, desde que a mesma e
 *Headers*
 
 ```
-{
-	Authorization: token
-}
+{ "Authorization": "token" }
 
 ```
 
