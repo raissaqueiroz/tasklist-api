@@ -2,7 +2,7 @@
 
 API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
 
-## Stack Principal
+## STACK PRINCIPAL
 
 - Javascript
 - NodeJS
@@ -29,7 +29,7 @@ API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um
 - Testando Requisição pra API com *Insominia*
 - Estrutura *MVC*
 
-## Instalação
+## INSTALAÇÃO
 
 00. Será necessário uma string de conexão com o MongoDB. Caso você não tenha uma ainda, você pode criar no atlas através [desse link](https://www.mongodb.com/cloud/atlas/register)
 01. Você irá precisar ter o NodeJS e o NPM instalados no seu computador. [Clique aqui](https://nodejs.org/en/) para baixar o NodeJS. O NPM já vem com o NodeJS.
@@ -47,7 +47,7 @@ API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um
 
 
 
-## Endpoints
+## DOCUMENTAÇÃO BÁSICA API - ENDPOINTS
 
 ### Sessions: POST /sessions
 
