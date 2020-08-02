@@ -2,28 +2,32 @@
 
 API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
 
-## Experiência Adquirida
+## Stack Principal
 
-- API
-- MongoDB
-- Mongoose
 - Javascript
 - NodeJS
 - Express
-- Cors
-- DotEnv
+- MongoDB
+- Mongoose
+- Padrões REST
+
+## O QUE FOI UTILIZADO E ABSORVIDO DURANTE O PROJETO
+
+- Criação e Consumo de API's
 - Padrões REST
 - Verbos HTTPS
 - Status Code
-- Endpoints amigáveis
+- Endpoints Amigáveis
 - Params, Querys e afins
-- Autenticação com JWT
-- Criptografias & Hashs com Bcrypt
-- ESlint
-- Erettier
-- Editorconfig
-- Yup
-- Insominia
+- Autenticação com *JWT*
+- Criptografias & Hashs com *Bcrypt*
+- Padronização de Cógico com *ESlint*, *Prettier* e *EditorConfig*
+- Banco de Dados não Relacional *MongoDB*, utilizando *Mongoose*
+- "Travando" Requisições pra API com *CORS*
+- Variáveis de Ambiente com *DotEnv*
+- Validações com *YUP*
+- Testando Requisição pra API com *Insominia*
+- Estrutura *MVC*
 
 ## Instalação
 
