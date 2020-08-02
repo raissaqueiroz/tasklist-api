@@ -1,6 +1,6 @@
 # TASKLIST - API
 
-API REST básica para gerenciar tarefas. Desenvolvida com intuito de por em prática conhecimentos recém adquiridos.
+API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
 
 ## Experiência Adquirida
 
@@ -192,4 +192,4 @@ Método em que o usuário poderá deletar a tarefa desejada, desde que a mesma e
 
 ```
 
-#### Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
+
