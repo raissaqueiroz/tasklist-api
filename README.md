@@ -1,0 +1,195 @@
+# TASKLIST - API
+
+API REST básica para gerenciar tarefas. Desenvolvida com intuito de por em prática conhecimentos recém adquiridos.
+
+## Experiência Adquirida
+
+- API
+- MongoDB
+- Mongoose
+- Javascript
+- NodeJS
+- Express
+- Cors
+- DotEnv
+- Padrões REST
+- Verbos HTTPS
+- Status Code
+- Endpoints amigáveis
+- Params, Querys e afins
+- Autenticação com JWT
+- Criptografias & Hashs com Bcrypt
+- ESlint
+- Erettier
+- Editorconfig
+- Yup
+- Insominia
+
+## Instalação
+
+00. Será necessário uma string de conexão com o MongoDB. Caso você não tenha uma ainda, você pode criar no atlas através [desse link](https://www.mongodb.com/cloud/atlas/register)
+01. Você irá precisar ter o NodeJS e o NPM instalados no seu computador. [Clique aqui](https://nodejs.org/en/) para baixar o NodeJS. O NPM já vem com o NodeJS.
+02. Baixe o repositório deste projeto no seu computador. Você poderá fazer isso através do botão "code" que tem ali em cima, basta clicar nele e em seguida em download ZIP.
+03. Localize o arquivo recem baixado no seu computador e descompate-o
+04. Abra a pasta que descompactou e localize o arquivo .env
+05. abra o arquivo .env e add a vaiavel de ambiente MONGO_URL.
+06. O valor dessa variável deve ser correspondente a string de conexão do MongoDB que você criou na etapa 00. Ficará assim: MONGO_URL=stringdeconexao
+07. Abra o Prompt de Comando do seu computador
+08. Através do Prompt navegue até a pasta que você acabou de descompactar
+09. Digite o comando `npm install` e aperte enter
+10. Espere terminar de instalar todas as dependências
+11. Digite o comando `npm start` e aperte enter
+12. Pronto! a API estará rodando na porta 3333. Caso você deseje alterar para outra porta, basta adicionar ao aquivo .env do projeto como no exemplo a seguir: `PORT=3333`.
+
+
+
+## Endpoints
+
+### Sessions: POST /sessions
+
+Método para logar usuário. Ele retorna o id, nome, email e token de acesso.
+
+**Body*
+```
+{
+  "email": "example@example.com",
+  "password_hash": "example123"
+}
+
+```
+
+### Users: POST /users
+
+Método para cadastrar novo usuário.
+
+**Body*
+
+```
+{
+
+		name: Raissa Queiroz,
+		email: example@example.com,
+		password_hash: example123,
+
+}
+
+```
+
+### Users: PUT /users
+
+Método para atualizar dados do usuário. É necessário além do corpo da requisição o token de acesso gerado na rota de `/sessions`. Nenhum dos campos abaixos são obrigatorios, entretanto, caso deseje alterar a senha os campos `old_password`, `password_hash` e `confirm_password` se tornam obrigatórios.
+
+- `old_password` -> Senha de acesso anterior
+- `password_hash` -> Nova senha
+- `confirm_password` -> Repetição Nova Senha
+
+*Body*
+
+```
+{
+
+		name: Example Name,
+		email: example@example.com,
+		old_password: example123
+		password_hash: novoexample123,
+		confirm_password: novoexample123
+
+}
+
+```
+
+*Headers*
+
+```
+{
+	Authorization: token
+}
+
+```
+
+### Taks: POST /tasks
+
+Método para cadastrar nova tarefa.
+
+**Body*
+
+```
+{
+
+		task: criando task de example,
+
+}
+
+```
+
+*Headers*
+
+```
+{
+	Authorization: token
+}
+
+```
+
+
+### Tasks: GET /tasks OR GET /tasks?propriety=value
+
+Método para listar as tarefas, podendo elas serem filtradas através do Query Params. É necessário o token de acesso gerado na rota de `/sessions`.
+
+
+*Headers*
+
+```
+{
+	Authorization: token
+}
+
+```
+
+**exemplo**
+
+```
+GET /tasks?status=true
+
+```
+
+### Taks: PUT /tasks/:task_id
+
+Método em que o usuário poderá atualizar a tarefa desejada, desde que a mesma esteja vincula ao seu id de usuário. Nenhuma das propriedas citadas abaixo são obrigatórias no corpo da requisição. `task_id` no endpoint corresponde ao id da tarefa que o usuário está tentando atualizar.
+
+**Body*
+
+```
+{
+
+		task: Editando title da task
+		check: false,
+
+}
+
+```
+
+*Headers*
+
+```
+{
+	Authorization: token
+}
+
+```
+
+
+### Taks: DELETE /tasks/:task_id
+
+Método em que o usuário poderá deletar a tarefa desejada, desde que a mesma esteja vincula ao seu id de usuário. `task_id` no endpoint corresponde ao id da tarefa que o usuário está tentando atualizar.
+
+*Headers*
+
+```
+{
+	Authorization: token
+}
+
+```
+
+#### Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
