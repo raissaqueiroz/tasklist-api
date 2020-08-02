@@ -107,7 +107,7 @@ Método para atualizar dados do usuário. É necessário além do corpo da requi
 
 ```
 
-### Taks: POST /tasks
+### Tasks: POST /tasks
 
 Método para cadastrar nova tarefa.
 
@@ -153,7 +153,7 @@ GET /tasks?status=true
 
 ```
 
-### Taks: PUT /tasks/:task_id
+### Tasks: PUT /tasks/:task_id
 
 Método em que o usuário poderá atualizar a tarefa desejada, desde que a mesma esteja vincula ao seu id de usuário. Nenhuma das propriedas citadas abaixo são obrigatórias no corpo da requisição. `task_id` no endpoint corresponde ao id da tarefa que o usuário está tentando atualizar.
 
@@ -179,7 +179,7 @@ Método em que o usuário poderá atualizar a tarefa desejada, desde que a mesma
 ```
 
 
-### Taks: DELETE /tasks/:task_id
+### Tasks: DELETE /tasks/:task_id
 
 Método em que o usuário poderá deletar a tarefa desejada, desde que a mesma esteja vincula ao seu id de usuário. `task_id` no endpoint corresponde ao id da tarefa que o usuário está tentando atualizar.
 
