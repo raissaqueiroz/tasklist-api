@@ -2,7 +2,7 @@
 
 API REST básica para gerenciar tarefas. Essa API tem o intuito de demonstrar um pouco dos meus amplos conhecimentos no desenvolvimento de API's REST.
 
-- *STACK PRINCIPAL: Javascript, NodeJS, Express, MongoDB, Mongoose & Padrões REST*
+**STACK PRINCIPAL:** *Javascript, NodeJS, Express, MongoDB, Mongoose & Padrões REST*
 
 
 ## O QUE FOI UTILIZADO E ABSORVIDO DURANTE O PROJETO
